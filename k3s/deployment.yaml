@@ -19,7 +19,7 @@ spec:
         - name: playground
           image: "wil42/playground:v1"
           ports:
-            - containerPort: 8080
+            - containerPort: 8888
 ---
 apiVersion: v1
 kind: Service
@@ -31,7 +31,7 @@ spec:
     app: wils-playground
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 8888
+      targetPort: 8888
   type: LoadBalancer
   
